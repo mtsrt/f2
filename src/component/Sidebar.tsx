@@ -22,7 +22,7 @@ function Sidebar() {
                             onClick={() => {
                                 window.location.pathname = value.link;
                             }}>
-                                <div>{value.icon}</div>
+                                <div id="icon">{value.icon}</div>
                                 <div id="title">{value.title}</div>
                             </li>
                         )

@@ -45,6 +45,15 @@
   background-color: #3b627a;
 }
 
+.row #icon{
+  flex: 30%;
+  margin-left: 20px;
+}
+
+.row #title{
+  flex: 70%;
+}
+
 .signout {
   border-radius: 10px;
   width: 200px;
