@@ -2,6 +2,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import InputIcon from '@mui/icons-material/Input';
 import OutputIcon from '@mui/icons-material/Output';
+import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 
 export const SidebarData = [
     {
@@ -26,7 +27,7 @@ export const SidebarData = [
     },
     {
         title: "Lost",
-        icon: <HomeIcon />,
+        icon: <ConfirmationNumberIcon />,
         link: "/lost"
     }
 ]
