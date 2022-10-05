@@ -11,11 +11,24 @@ const Sidebar: React.FC = () => {
     const signInWithGoogle = () => {
       signInWithPopup(auth, provider);
     };
-
     return (
       <button onClick={signInWithGoogle}>
         <p>Googleでサインイン</p>
       </button>
+    );
+  };
+  const SignOutButton: React.FC = () => {
+    return (
+      <button onClick={() => auth.signOut()} className="signout">
+        <p>SignOut</p>
+      </button>
+    );
+  };
+  const UserInfo: React.FC = () => {
+    return (
+      <div className="userInfo">
+        <p>{auth.currentUser?.displayName}</p>
+      </div>
     );
   };
 
@@ -56,21 +69,5 @@ const Sidebar: React.FC = () => {
     </div>
   );
 };
-
-function SignOutButton() {
-  return (
-    <button onClick={() => auth.signOut()} className="signout">
-      <p>SignOut</p>
-    </button>
-  );
-}
-
-function UserInfo() {
-  return (
-    <div className="userInfo">
-      <p>{auth.currentUser?.displayName}</p>
-    </div>
-  );
-}
 
 export default Sidebar;

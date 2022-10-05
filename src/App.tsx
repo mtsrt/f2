@@ -1,15 +1,20 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Sidebar from "./component/Sidebar";
-import Home from "./component/Home";
+import Home from "./component/home";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Sidebar />
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
