@@ -6,7 +6,7 @@ import Home from "./component/home";
 
 const App = () => {
   return (
-    <div className="App">
+    <div style={{ width: "100%", height: "100vh" }}>
       <Sidebar />
       <BrowserRouter>
         <Routes>
