@@ -6,7 +6,6 @@ import { SidebarData } from "./SidebarData";
 
 const Sidebar: React.FC = () => {
   const [user] = useAuthState(auth);
-
   const SignInButton: React.FC = () => {
     const signInWithGoogle = () => {
       signInWithPopup(auth, provider);
@@ -26,7 +25,7 @@ const Sidebar: React.FC = () => {
   };
   const UserInfo: React.FC = () => {
     return (
-      <div className="userInfo">
+      <div className="userInfo" style={{ color: "white", textAlign: "center" }}>
         <p>{auth.currentUser?.displayName}</p>
       </div>
     );
@@ -42,8 +41,16 @@ const Sidebar: React.FC = () => {
             backgroundColor: "#2d445d",
           }}
         >
-          <h1 className="Name">Test</h1>
-          <ul className="SidebarList">
+          <h1
+            className="Name"
+            style={{ textAlign: "center", color: "white", height: "10vh" }}
+          >
+            Test
+          </h1>
+          <ul
+            className="SidebarList"
+            style={{ height: "auto", padding: "0", width: "100%" }}
+          >
             {SidebarData.map((value, key) => {
               return (
                 <li

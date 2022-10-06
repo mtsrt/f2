@@ -4,18 +4,6 @@
   box-sizing: border-box;
 }
 
-.Name {
-  text-align: center;
-  color: white;
-  height: 5vh;
-}
-
-.SidebarList {
-  height: auto;
-  padding: 0;
-  width: 100%;
-}
-
 .SidebarList #active {
   background-color: #3b627a;
 }
@@ -49,9 +37,4 @@
   height: 30px;
   margin-left: 20px;
   margin-top: 10px;
-}
-
-.userInfo {
-  color: white;
-  text-align: center;
 }
