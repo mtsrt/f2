@@ -18,7 +18,16 @@ const Sidebar: React.FC = () => {
   };
   const SignOutButton: React.FC = () => {
     return (
-      <button onClick={() => auth.signOut()} className="signout">
+      <button
+        onClick={() => auth.signOut()}
+        style={{
+          borderRadius: "10px",
+          width: "200px",
+          height: "30px",
+          marginLeft: "20px",
+          marginTop: "10px",
+        }}
+      >
         <p>SignOut</p>
       </button>
     );
@@ -41,10 +50,7 @@ const Sidebar: React.FC = () => {
             backgroundColor: "#2d445d",
           }}
         >
-          <h1
-            className="Name"
-            style={{ textAlign: "center", color: "white", height: "10vh" }}
-          >
+          <h1 style={{ textAlign: "center", color: "white", height: "10vh" }}>
             Test
           </h1>
           <ul
@@ -56,7 +62,14 @@ const Sidebar: React.FC = () => {
                 <li
                   key={key}
                   id={window.location.pathname === value.link ? "active" : ""}
-                  className="row"
+                  style={{
+                    width: "100%",
+                    height: "60px",
+                    display: "flex",
+                    color: "#fff",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                   onClick={() => {
                     window.location.pathname = value.link;
                   }}
